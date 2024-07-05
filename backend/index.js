@@ -15,7 +15,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://madbook.vercel.app/:5173",
+    origin: "https://madbook.vercel.app:5173",
   },
 });
 

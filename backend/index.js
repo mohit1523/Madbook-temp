@@ -16,6 +16,9 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: "https://madbook.vercel.app/",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+    credentials: true,
   },
 });
 
@@ -23,7 +26,15 @@ app.get('/', (req, res) => {
   res.send("Express on vercel")
 })
 
-app.use(cors());
+app.use(cors({
+  cors: {
+    origin: "https://madbook.vercel.app/",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+    credentials: true,
+  },
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/post", post);

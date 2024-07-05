@@ -18,7 +18,7 @@ export default function Profile() {
   const [tab, setTab] = useState("post");
 
   let callAllPosts = async () => {
-    await fetch("http://localhost:3000/post/getpostsofuser", {
+    await fetch("https://madbook-api.vercel.app/post/getpostsofuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ export default function Profile() {
   };
 
   let callAllLikes = async () => {
-    await fetch("http://localhost:3000/like/getlikesofuser", {
+    await fetch("https://madbook-api.vercel.app/like/getlikesofuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -56,7 +56,7 @@ export default function Profile() {
   };
 
   let callAllComments = async () => {
-    await fetch("http://localhost:3000/comment/getcommentsOfuser", {
+    await fetch("https://madbook-api.vercel.app/comment/getcommentsOfuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -80,7 +80,7 @@ export default function Profile() {
   };
 
   let getUser = async () => {
-    await fetch("http://localhost:3000/user/getsingleuser", {
+    await fetch("https://madbook-api.vercel.app/user/getsingleuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

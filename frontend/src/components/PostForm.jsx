@@ -14,7 +14,7 @@ export default function PostForm() {
   });
 
   let callAllPosts = async () => {
-    await fetch("http://localhost:3000/post/getallposts", {
+    await fetch("https://madbook-api.vercel.app/post/getallposts", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -39,7 +39,7 @@ export default function PostForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:3000/post/createpost", {
+    await fetch("https://madbook-api.vercel.app/post/createpost", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -62,7 +62,7 @@ const Comment = (props) => {
 
     if (con == false) return;
 
-    await fetch("http://localhost:3000/comment/deletecomment", {
+    await fetch("https://madbook-api.vercel.app/comment/deletecomment", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

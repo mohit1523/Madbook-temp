@@ -5,7 +5,7 @@ export default function Notifications() {
   const [notifications, setNotifications] = useState([]);
 
   const getNotifications = async () => {
-    await fetch("http://localhost:3000/notifications/getnotifications", {
+    await fetch("https://madbook-api.vercel.app/notifications/getnotifications", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

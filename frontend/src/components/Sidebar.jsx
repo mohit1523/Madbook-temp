@@ -8,7 +8,7 @@ export default function Sidebar() {
   const [userPosts, setUserPosts] = useState([]);
 
   let fetchPosts = async (id) => {
-    await fetch("http://localhost:3000/post/getpostsofuser", {
+    await fetch("https://madbook-api.vercel.app/post/getpostsofuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

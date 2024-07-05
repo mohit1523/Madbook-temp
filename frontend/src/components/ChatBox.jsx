@@ -11,7 +11,7 @@ export default function ChatBox(props) {
   const [currMsg, setCurrMsg] = useState("");
 
   const fetchMsgs = async () => {
-    await fetch("http://localhost:3000/chat/getuserchat", {
+    await fetch("https://madbook-api.vercel.app/chat/getuserchat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ export default function ChatBox(props) {
 
   const sendMsg = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:3000/chat/sendmsg", {
+    await fetch("https://madbook-api.vercel.app/chat/sendmsg", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

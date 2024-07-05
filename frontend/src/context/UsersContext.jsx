@@ -10,7 +10,7 @@ const UserDetailsProvider = (props) => {
 
   const fetchUserDetails = async () => {
     if(!localStorage.getItem("token")) return;
-    await fetch("http://localhost:3000/user/getusers", {
+    await fetch("https://madbook-api.vercel.app/user/getusers", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

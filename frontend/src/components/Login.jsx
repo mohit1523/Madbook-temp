@@ -20,7 +20,7 @@ export default function Login() {
 
   const checkUser = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:3000/user/loginuser", {
+    await fetch("https://madbook-api.vercel.app/user/loginuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

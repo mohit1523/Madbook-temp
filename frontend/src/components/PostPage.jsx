@@ -8,7 +8,7 @@ export default function PostPage() {
   const [user, setUser] = useState(null);
 
   const getPost = async () => {
-    await fetch("http://localhost:3000/post/getpost", {
+    await fetch("https://madbook-api.vercel.app/post/getpost", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export default function PostPage() {
   };
 
   let getUser = async () => {
-    await fetch("http://localhost:3000/user/getsingleuser", {
+    await fetch("https://madbook-api.vercel.app/user/getsingleuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

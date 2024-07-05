@@ -43,7 +43,7 @@ export default function Signup() {
       setEmoji(initials);
     }
 
-    await fetch("http://localhost:3000/user/createuser", {
+    await fetch("https://madbook-api.vercel.app/user/createuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

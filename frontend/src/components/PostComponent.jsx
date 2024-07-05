@@ -52,7 +52,7 @@ export default function Post(props) {
 
   let submitComment = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:3000/comment/addcomment", {
+    await fetch("https://madbook-api.vercel.app/comment/addcomment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -73,7 +73,7 @@ export default function Post(props) {
   };
 
   let getComments = async () => {
-    await fetch("http://localhost:3000/comment/getcomments", {
+    await fetch("https://madbook-api.vercel.app/comment/getcomments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -92,7 +92,7 @@ export default function Post(props) {
   };
 
   let getLikes = async () => {
-    await fetch("http://localhost:3000/like/getlikes", {
+    await fetch("https://madbook-api.vercel.app/like/getlikes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -113,7 +113,7 @@ export default function Post(props) {
 
   let likePost = async () => {
     setCurrUserLiked(true);
-    await fetch("http://localhost:3000/like/addlike", {
+    await fetch("https://madbook-api.vercel.app/like/addlike", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -133,7 +133,7 @@ export default function Post(props) {
 
   let dislikePost = async () => {
     setCurrUserLiked(false);
-    await fetch("http://localhost:3000/like/deletelike", {
+    await fetch("https://madbook-api.vercel.app/like/deletelike", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

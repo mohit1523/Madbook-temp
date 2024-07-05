@@ -5,7 +5,7 @@ export default function SubNotification(props) {
   const [sendingUser, setSendingUser] = useState({});
 
   let getUser = async () => {
-    await fetch("http://localhost:3000/user/getsingleuser", {
+    await fetch("https://madbook-api.vercel.app/user/getsingleuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
